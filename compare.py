@@ -10,7 +10,6 @@ import numpy as np
 def remove_comments(source): #Функция для удаления однострочных комментариев 
     string = re.sub(re.compile("'''.*?'''", re.DOTALL), "", source)  
     string = re.sub(re.compile('""".*?"""', re.DOTALL), "", source)  
-    string = re.sub(re.compile("(?<!(['\"]).)#[^\n]*?\n"), "\n", string) 
     return string 
 
 def make_clean_ast(pyfile_path1, pyfile_path2):
